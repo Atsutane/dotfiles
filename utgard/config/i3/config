@@ -1,0 +1,188 @@
+# vim:set syntax=i3:
+
+set $pmod Mod4
+set $smod Mod1
+
+# ISO 10646 = Unicode
+# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+font pango:DejaVu Sans Mono, Terminus Semi-Condensed 9
+
+# Use Mouse+Mod1 to drag floating windows to their wanted position
+floating_modifier Mod1
+
+# temporary path during development
+ipc-socket /tmp/nestedcons
+
+# Open empty container
+#bindsym $pmod+Shift+Return open
+
+# Start terminal ($pmod+Enter)
+bindsym $pmod+Return exec --no-startup-id /usr/bin/roxterm
+
+# Start rox
+bindsym $pmod+r exec --no-startup-id /usr/bin/rox
+
+# Start dmenu ($pmod+p)
+bindsym $pmod+v exec /usr/bin/dmenu_run
+
+# Horizontal orientation
+bindsym $pmod+x split h
+
+# Vertical orientation
+bindsym $pmod+c split v
+
+# Fullscreen ($pmod+f)
+bindsym $pmod+f fullscreen
+
+# Stacking ($pmod+s)
+bindsym $pmod+a layout stacking
+
+# Tabbed ($pmod+w)
+bindsym $pmod+s layout tabbed
+
+# Default ($pmod+l)
+bindsym $pmod+d layout default
+
+# toggle tiling / floating
+bindsym $pmod+Shift+space floating toggle
+
+
+# Kill current client ($pmod+Shift+q)
+bindsym $pmod+Shift+q kill
+bindsym $pmod+BackSpace kill
+
+# Restore saved JSON layout
+bindsym $pmod+y restore /home/atsutane/.config/i3/layout.json
+
+# Restart i3
+bindsym $pmod+Shift+r restart
+# Reload i3
+bindsym $pmod+Shift+t reload
+# Exit i3
+bindsym $pmod+Shift+e exit
+
+# Focus ($pmod+n/r/t/d)
+bind $pmod+44 focus left
+bind $pmod+45 focus down
+bind $pmod+46 focus up
+bind $pmod+47 focus right
+
+# Focus the parent or child container
+bindsym $pmod+Up focus parent
+bindsym $pmod+Down focus child
+
+# Move
+bind $pmod+Shift+44 move left
+bind $pmod+Shift+45 move down
+bind $pmod+Shift+46 move up
+bind $pmod+Shift+47 move right
+
+# Workspaces ($pmod+1/2/…)
+bindsym $pmod+1 workspace 1
+bindsym $pmod+2 workspace 2
+bindsym $pmod+3 workspace 3
+bindsym $pmod+4 workspace 4
+bindsym $pmod+5 workspace 5
+bindsym $pmod+6 workspace 6
+bindsym $pmod+7 workspace 7
+bindsym $pmod+8 workspace 8
+bindsym $pmod+9 workspace 9
+bindsym $pmod+0 workspace 10
+
+# Move to Workspaces
+bindsym $pmod+Shift+1 move workspace 1
+bindsym $pmod+Shift+2 move workspace 2
+bindsym $pmod+Shift+3 move workspace 3
+bindsym $pmod+Shift+4 move workspace 4
+bindsym $pmod+Shift+5 move workspace 5
+bindsym $pmod+Shift+6 move workspace 6
+bindsym $pmod+Shift+7 move workspace 7
+bindsym $pmod+Shift+8 move workspace 8
+bindsym $pmod+Shift+9 move workspace 9
+bindsym $pmod+Shift+0 move workspace 10
+
+# assign windows to workspaces
+assign [class="Claws-mail"] 3
+assign [class="Firefox"] 4
+assign [class="Navigator"] 4
+
+for_window [class="XTerm"] border 1pixel
+#for_window [class="XTerm"] floating enable
+for_window [class="Wine"] floating enable
+for_window [class="VisualBoyAdvance"] floating enable
+for_window [class="FLTK"] floating enable
+for_window [class="VirtualBox"] floating enable
+for_window [class="QEMU"] floating enable
+for_window [class="URxvt"] floating enable; border 1pixel
+for_window [class="scummvm"] floating enable; border 1pixel
+for_window [class="armitage-ArmitageMain"] floating enable
+for_window [class="msfgui-MsfguiApp"] floating enable
+for_window [class="Truecrypt"] floating enable
+for_window [class="Eclipse"] border 1pixel
+for_window [title="Frozen-Bubble 2"] floating enable; border 1pixel
+for_window [class="Bsvc.tk"] floating enable
+
+# gimp - config by GraveyardPC
+#assign [class="Gimp"] gimp
+#for_window [title="GIMP Startup"] move workspace gimp
+#for_window [window_role="gimp-toolbox"] floating disable; layout stacking; move left; resize shrink right 31px or 31 ppt
+
+
+
+# bind i3lock -d to stop key (XF86AudioStop)
+bind 174 exec /usr/bin/i3lock -d -i /home/atsutane/media/wallpaper/Motivation.png
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j           resize shrink width 10 px or 10 ppt
+        bindsym k           resize grow height 10 px or 10 ppt
+        bindsym l           resize shrink height 10 px or 10 ppt
+        bindsym semicolon   resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left        resize shrink width 10 px or 10 ppt
+        bindsym Down        resize grow height 10 px or 10 ppt
+        bindsym Up          resize shrink height 10 px or 10 ppt
+        bindsym Right       resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $pmod+space mode "resize"
+
+bar {
+  status_command i3status
+	mode hide
+	position bottom
+	tray_output LVDS1
+	#font -misc-fixed-medium-r-normal--10-100-75-75-c-60-iso10646-1
+	font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+	workspace_buttons yes
+  colors {
+    separator #dc322f
+    background #002b36
+    statusline #268bd2
+    focused_workspace #fdf6e3 #859900 #fdf6e3
+    active_workspace #fdf6e3 #6c71c4 #fdf6e3
+    inactive_workspace #586e75 #93a1a1 #002b36
+    urgent_workspace #d33682 #d33682 #fdf6e3
+  }
+}
+
+# Startup
+exec feh --bg-scale /home/atsutane/.wallpaper
+exec xrdb -merge .Xdefaults
+
+# Color config
+client.focused #859900 #859900 #fdf6e3 #859900
+client.focused_inactive #073642 #073642 #eee8d5 #6c71c4
+client.unfocused #073642 #073642 #93a1a1 #586e75
+client.urgent #d33682 #d33682 #fdf6e3 #dc322f
