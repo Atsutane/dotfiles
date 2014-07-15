@@ -1,7 +1,7 @@
 general {
-        colors = true
-        interval = 5
-		output_format = i3bar
+	colors = true
+	interval = 5
+	output_format = i3bar
 }
 
 order  = "ipv6"
@@ -22,26 +22,26 @@ ipv6 {
 }
 
 wireless wlan0 {
-        format_up = "W: (%quality at %essid) %ip"
-        format_down = "W"
+	format_up = "W: (%quality at %essid) %ip"
+	format_down = "W"
 }
 
 ethernet eth0 {
-        format_up = "E: %ip(%speed)"
-        format_down = ""
+	format_up = "E: %ip(%speed)"
+	format_down = ""
 }
 
 battery 0 {
-		last_full_capacity = true
-        format = "%status %percentage %remaining [@%emptytime]"
+	last_full_capacity = true
+	format = "%status %percentage %remaining [@%emptytime]"
 }
 
 run_watch DHCP {
-        pidfile = "/run/dhclient*.pid"
+	pidfile = "/run/dhclient*.pid"
 }
 
 run_watch VPN {
-        pidfile = "/run/vpnc/defaultroute"
+	pidfile = "/run/vpnc/defaultroute"
 }
 
 time {
