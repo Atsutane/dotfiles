@@ -32,3 +32,19 @@ set directory=/tmp
 
 " don't store .viminfo in $HOME
 set viminfo+=n/tmp/.viminfo_atsu
+
+" Highlighting for whitespaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+
+highlight IdentTab ctermbg=blue guibg=blue
+match IdentTab /^\t\+/
+autocmd BufWinEnter * match IdentTab /^\t\+/
+autocmd InsertEnter * match IdentTab /^\t\+\%#\@<!/
+autocmd InsertLeave * match IdentTab /^\t\+/
+
+autocmd BufWinLeave * call clearmatches()
+
