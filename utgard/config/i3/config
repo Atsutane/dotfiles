@@ -103,6 +103,7 @@ bindsym $pmod+Shift+0 move workspace 10
 
 # assign windows to workspaces
 assign [class="Claws-mail"] 3
+assign [class="Thunderbird"] 3
 assign [class="Firefox"] 4
 assign [class="Navigator"] 4
 
