@@ -6,7 +6,7 @@ general {
 
 order  = "ipv6"
 order += "disk /"
-order += "disk /home/atsutane"
+order += "disk /home"
 #order += "run_watch DHCP"
 #order += "run_watch VPN"
 order += "wireless wlan0"
@@ -60,7 +60,7 @@ disk "/" {
 	format = "/%free"
 }
 
-disk "/home/atsutane" {
+disk "/home" {
 	format = "~%free"
 }
 
