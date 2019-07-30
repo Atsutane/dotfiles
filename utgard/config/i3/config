@@ -17,7 +17,8 @@ ipc-socket /tmp/nestedcons
 #bindsym $pmod+Shift+Return open
 
 # Start terminal ($pmod+Enter)
-bindsym $pmod+Return exec --no-startup-id /usr/bin/roxterm
+#bindsym $pmod+Return exec --no-startup-id /usr/bin/roxterm
+bindsym $pmod+Return exec --no-startup-id /usr/bin/sakura
 
 # Start rox
 bindsym $pmod+r exec --no-startup-id /usr/bin/rox
