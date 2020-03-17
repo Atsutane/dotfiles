@@ -1,7 +1,8 @@
 setopt append_history
 #unsetopt share_history
 export GOPATH=~/go
-export PATH=$(ruby -rubygems -e "puts Gem.user_dir")/bin:/home/atsutane/bin:/home/atsutane/go/bin:$PATH:/opt/bsvc/usr/bin
+#export PATH=$(ruby -rubygems -e "puts Gem.user_dir")/bin:/home/atsutane/bin:/home/atsutane/go/bin:$PATH:/opt/bsvc/usr/bin
+export PATH=/home/atsutane/bin:/home/atsutane/go/bin:$PATH:/opt/bsvc/usr/bin
 export OOO_FORCE_DESKTOP=gnome
 export KEYID="295AFBF4"
 export GPGKEYID="295AFBF4"
@@ -14,6 +15,7 @@ alias cpoc='cd /tmp && FN=$(mktemp --suffix=.c) && cp ~/.poc-template.c $FN && v
 alias rm='nocorrect rm -I'
 alias scr='screen -x || screen'
 alias cscope='cscope -R'
+alias ltr='ls -ltr --color'
 
 function getinet () {
 	if [ $(ifconfig wlan0 | grep "inet addr:" | cut -d ":" -f 2 | cut -d " " -f1) ]; then
