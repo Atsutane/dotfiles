@@ -106,6 +106,7 @@ bindsym $pmod+Shift+0 move workspace 10
 assign [class="Claws-mail"] 3
 assign [class="Thunderbird"] 3
 assign [class="Firefox"] 4
+assign [class="firefox"] 4
 assign [class="Navigator"] 4
 
 for_window [class="XTerm"] border 1pixel
