@@ -1,0 +1,63 @@
+general {
+	colors = true
+	interval = 5
+	output_format = i3bar
+}
+
+order  = "ipv6"
+order += "disk /"
+order += "disk /home"
+order += "path_exists VPN"
+order += "wireless wlan0"
+order += "ethernet enp34s0"
+order += "cpu_temperature 0"
+order += "memory"
+order += "load"
+order += "time"
+
+ipv6 {
+	format_up = "%ip"
+	format_down = ""
+}
+
+path_exists VPN {
+	path = "/proc/sys/net/ipv4/conf/tun0"
+}
+
+wireless wlan0 {
+	format_up = "W: (%quality at %essid, %bitrate) %ip"
+	format_down = ""
+}
+
+ethernet enp34s0 {
+	format_up = "E: %ip(%speed)"
+	format_down = ""
+}
+
+time {
+	format = "%Y-%m-%d %H:%M:%S"
+}
+
+load {
+	format = "%1min"
+}
+
+cpu_temperature 0 {
+	format = "T: %degrees°C"
+	path = "/sys/devices/platform/nct6775.2592/hwmon/hwmon3/temp2_input"
+}
+
+memory {
+	format = "%used"
+    threshold_degraded = "10%"
+    format_degraded = "MEMORY: %free"
+}
+
+disk "/" {
+	format = "/%free"
+}
+
+disk "/home" {
+	format = "~%free"
+}
+
