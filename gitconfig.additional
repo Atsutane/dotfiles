@@ -1,0 +1,23 @@
+# Add this to your $HOME/.gitconfig or specific local ones
+#[include]
+#	path = /path/to/this/file
+
+[color]
+	diff = auto
+	color = auto
+[push]
+	default = current
+[merge]
+	tool = vimdiff
+[core]
+	editor = vim
+[sendemail]
+	smtpserver = /usr/bin/msmtp
+[pull]
+	rebase = false
+[alias]
+	logtree = log --graph --oneline --decorate --all
+	logfull = log --full-diff -p
+[pretty]
+	fixes = Fixes: %h (\"%s\")
+
