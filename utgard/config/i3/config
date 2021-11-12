@@ -133,7 +133,7 @@ for_window [class="Bsvc.tk"] floating enable
 
 
 # bind i3lock -d to stop key (XF86AudioStop)
-bind 174 exec /usr/bin/i3lock -d -i /home/atsutane/media/wallpaper/Motivation.png
+bind 174 exec /usr/bin/i3lock -d -i /home/atsutane/media/wallpaper/Motivation.png -e
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

@@ -175,7 +175,7 @@ for_window [class="Bsvc.tk"] floating enable
 
 # bind i3lock -d to stop key (XF86AudioStop)
 #bind 174 exec /usr/bin/i3lock -d -c 555555
-bindsym $mod+Shift+BackSpace exec /usr/bin/i3lock -d -c 555555
+bindsym $mod+Shift+BackSpace exec /usr/bin/i3lock -d -c 555555 -e
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
