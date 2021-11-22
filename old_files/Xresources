@@ -1,0 +1,50 @@
+!! Xpdf Settings
+xpdf*background: #eeeeec
+xpdf*foreground : #2e3436
+xpdf*shadowThickness: 1
+xpdf*initialZoom: width
+
+!! XTerm Settings
+XTerm*background: #333333
+XTerm*foreground: #b2b2b2
+XTerm*faceName: Bitstream Vera Sans Mono:style=Roman
+XTerm*faceSize: 10
+XTerm*font: Monospace:pixelsize=9
+XTerm*boldFont: Bitstream Vera Sans Mono-9:bold
+
+#include "/home/atsutane/.Xdefaults.d/taters"
+XTerm*color0: COLOUR_THEME_BLACK
+XTerm*color8: COLOUR_THEME_DARK_GREY
+XTerm*color1: COLOUR_THEME_DARK_RED
+XTerm*color9: COLOUR_THEME_LIGHT_RED
+XTerm*color2: COLOUR_THEME_DARK_GREEN
+XTerm*color10: COLOUR_THEME_LIGHT_GREEN
+XTerm*color3: COLOUR_THEME_DARK_YELLOW
+XTerm*color11: COLOUR_THEME_LIGHT_YELLOW
+XTerm*color4: COLOUR_THEME_DARK_BLUE
+XTerm*color12: COLOUR_THEME_LIGHT_BLUE
+XTerm*color5: COLOUR_THEME_DARK_MAGENTA
+XTerm*color13: COLOUR_THEME_LIGHT_MAGENTA
+XTerm*color6: COLOUR_THEME_DARK_CYAN
+XTerm*color14: COLOUR_THEME_LIGHT_CYAN
+XTerm*color7: COLOUR_THEME_LIGHT_GREY
+XTerm*color15: COLOUR_THEME_WHITE
+URxvt*color0: COLOUR_THEME_BLACK
+URxvt*color8: COLOUR_THEME_DARK_GREY
+URxvt*color1: COLOUR_THEME_DARK_RED
+URxvt*color9: COLOUR_THEME_LIGHT_RED
+URxvt*color2: COLOUR_THEME_DARK_GREEN
+URxvt*color10: COLOUR_THEME_LIGHT_GREEN
+URxvt*color3: COLOUR_THEME_DARK_YELLOW
+URxvt*color11: COLOUR_THEME_LIGHT_YELLOW
+URxvt*color4: COLOUR_THEME_DARK_BLUE
+URxvt*color12: COLOUR_THEME_LIGHT_BLUE
+URxvt*color5: COLOUR_THEME_DARK_MAGENTA
+URxvt*color13: COLOUR_THEME_LIGHT_MAGENTA
+URxvt*color6: COLOUR_THEME_DARK_CYAN
+URxvt*color14: COLOUR_THEME_LIGHT_CYAN
+URxvt*color7: COLOUR_THEME_LIGHT_GREY
+URxvt*color15: COLOUR_THEME_WHITE
+
+
+

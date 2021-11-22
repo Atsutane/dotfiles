@@ -1,0 +1,67 @@
+
+!! Font Settings
+*faceName: Bitstream Vera Sans Mono:style=Roman
+*font: xft:Monospace:pixelsize=8
+*boldFont: xft:Bitstream Vera Sans Mono-9:bold
+XTerm*faceName: Monospace:style=Roman
+XTerm*font: Monospace:pixelsize=8
+XTerm*boldFont: Monospace-8:bold
+URxvt*faceName: Bitstream Vera Sans Mono:style=Roman
+URxvt*font: xft:Monospace:pixelsize=11
+URXvt*boldFont: xft:Bitstream Vera Sans Mono-10:bold
+
+!! URxvt Settings
+URxvt*title: newsbeuter
+URxvt*fadeColor: grey
+URxvt*fading:   10
+URxvt*shading: 15
+URxvt*inheritPixmap: true
+URxvt*transparent: true
+URxvt*tintColor: black
+URxvt*perl-ext-common: default,matcher
+URxvt*urlLauncher: midori
+URxvt*matcher.button: 1
+URxvt*matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
+URxvt*background: rgba:0000/0000/0000/cccc
+URxvt*borderless: true
+URxvt*geometry: 100x66
+URxvt*urgentOnBell: true
+
+!! Global
+*utf8: 1
+*faceSize: 10
+*jumpScroll: true
+*multiScroll: true
+*boldMode: true
+*scrollBar: false
+*cutNewline: false
+*scrollTtyOutput: false
+*scrollKey: true
+*cursorBlink: true
+*dynamicColors: false
+*saveLines: 3000
+*background: #222222
+*foreground: #b2b2b2
+*cursorColor: #707678
+
+!! Colours
+#include "/home/atsutane/.Xdefaults.d/taters"
+*color0: COLOUR_THEME_BLACK
+*color8: COLOUR_THEME_DARK_GREY
+*color1: COLOUR_THEME_DARK_RED
+*color9: COLOUR_THEME_LIGHT_RED
+*color2: COLOUR_THEME_DARK_GREEN
+*color10: COLOUR_THEME_LIGHT_GREEN
+*color3: COLOUR_THEME_DARK_YELLOW
+*color11: COLOUR_THEME_LIGHT_YELLOW
+*color4: COLOUR_THEME_DARK_BLUE
+*color12: COLOUR_THEME_LIGHT_BLUE
+*color5: COLOUR_THEME_DARK_MAGENTA
+*color13: COLOUR_THEME_LIGHT_MAGENTA
+*color6: COLOUR_THEME_DARK_CYAN
+*color14: COLOUR_THEME_LIGHT_CYAN
+*color7: COLOUR_THEME_LIGHT_GREY
+*color15: COLOUR_THEME_WHITE
+
+!cursor
+Xcursor.theme:          Vienna3
