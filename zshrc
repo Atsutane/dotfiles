@@ -19,18 +19,11 @@ alias scr='screen -x || screen'
 alias cscope='cscope -R'
 alias ltr='ls -ltr --color'
 
+
 alias aurclone () {
 	git clone "https://aur.archlinux.org/${1}.git"
 }
 
-function getinet () {
-	if [ $(ifconfig wlan0 | grep "inet addr:" | cut -d ":" -f 2 | cut -d " " -f1) ]; then
-		echo "$(ifconfig wlan0 | grep "inet addr:" | cut -d ":" -f 2 | cut -d " " -f1) @wlan0"
-	fi
-	if [ $(ifconfig eth0 | grep "inet addr:" | cut -d ":" -f 2 | cut -d " " -f1) ]; then
-		echo "$(ifconfig eth0 | grep "inet addr:" | cut -d ":" -f 2 | cut -d " " -f1) @eth0"
-	fi
-}
 
 function parse_git_branch() {
 	print "%{\e[1;34m%}$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')%{\e[0m%}\n"
