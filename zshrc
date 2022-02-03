@@ -9,6 +9,8 @@ export GPGKEYID="295AFBF4"
 export VISUAL=vim
 #export JAVA_HOME=/usr/lib/jvm/java-7-openjdk
 export MSF_DATABASE_CONFIG=/home/atsutane/.armitage_dbconfig.yml
+export DEBUGINFOD_URLS="https://europe.mirror.pkgbuild.com/"
+
 
 # Edit a temporary file with my template for a C proof-of-concept
 alias cpoc='cd /tmp && FN=$(mktemp --suffix=.c) && cp ~/.poc-template.c $FN && vim $FN && echo "Proof-of-concept stored in $FN"'
@@ -16,6 +18,10 @@ alias rm='nocorrect rm -I'
 alias scr='screen -x || screen'
 alias cscope='cscope -R'
 alias ltr='ls -ltr --color'
+
+alias aurclone () {
+	git clone "https://aur.archlinux.org/${1}.git"
+}
 
 function getinet () {
 	if [ $(ifconfig wlan0 | grep "inet addr:" | cut -d ":" -f 2 | cut -d " " -f1) ]; then
