@@ -20,10 +20,18 @@ alias cscope='cscope -R'
 alias ltr='ls -ltr --color'
 
 
-alias aurclone () {
+function aurclone () {
 	git clone "https://aur.archlinux.org/${1}.git"
 }
 
+function add-to-build-req-repo() {
+		if [ ! -f "${1}" ]; then
+			return
+		fi
+		_pkgname=`basename  "${1}"`
+		mv ${1} /mnt/code/repo_build_requirements/x86_64/
+		repo-add /mnt/code/repo_build_requirements/x86_64/build_requirements.db.tar.xz "/mnt/code/repo_build_requirements/x86_64/${_pkgname}"
+}
 
 function parse_git_branch() {
 	print "%{\e[1;34m%}$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')%{\e[0m%}\n"
