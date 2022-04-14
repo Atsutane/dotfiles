@@ -21,6 +21,10 @@ alias ltr='ls -ltr --color'
 
 
 function aurclone () {
+	if [ -z "${1}" ]; then
+		echo "Usage: aurclone PKGNAME"
+		return
+	fi
 	git clone "https://aur.archlinux.org/${1}.git"
 }
 
