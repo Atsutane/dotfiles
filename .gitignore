@@ -1,5 +1,7 @@
 *hist
 */*hist
 w3m/history
+w3m/*gz
+w3m/*cache*
 *.backup
 */*.backup
