@@ -1,0 +1,13 @@
+[Unit]
+Description=Upgrade the archlinux-keyring package each day
+
+[Timer]
+OnBootSec=5min
+OnCalendar=*-*-* 7:00:00
+RandomizedDelaySec=20m
+Persistent=true
+Unit=archlinux-keyring-update.service
+
+[Install]
+WantedBy=timers.target
+

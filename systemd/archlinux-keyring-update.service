@@ -1,0 +1,8 @@
+[Unit]
+Description=For updating the archlinux-keyring package
+
+[Service]
+Type=oneshot
+Exec=/usr/bin/pacman -Sy archlinux-keyring --needed --noconfirm
+User=root
+
