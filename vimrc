@@ -1,3 +1,5 @@
+source $VIMRUNTIME/defaults.vim
+
 " Don't ensure compatibility with vi at all cost
 set nocompatible
 " More flexible backspace
@@ -11,6 +13,9 @@ set title
 set laststatus=2
 " Automatically indent, and do it smart
 set autoindent smartindent
+set tabstop=8 softtabstop=8
+set shiftwidth=4 smarttab
+set expandtab
 " Enhanced mode for command-line completion
 set wildmenu
 " Don't jump to the matching bracket automatically
@@ -23,13 +28,12 @@ set fileencoding=utf-8 encoding=utf-8
 set nofen
 " Enable line numbers
 " set nu
-" Set the tabwidth
-set ts=4
 " Enable syntax highlighting
 syntax on
 " swap file directory
 set directory=/tmp
-
+" Make mouse behave the same across all terminals
+set mouse-=a
 " don't store .viminfo in $HOME
 set viminfo+=n/tmp/.viminfo_atsu
 
