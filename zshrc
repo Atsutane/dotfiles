@@ -20,6 +20,16 @@ alias cscope='cscope -R'
 alias ltr='ls -ltr --color'
 
 
+if [ -f '/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh' ]; then
+    source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
+if [ -f '/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh' ]; then
+    source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
+
+
 function aurclone () {
 	if [ -z "${1}" ]; then
 		echo "Usage: aurclone PKGNAME"
