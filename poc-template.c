@@ -11,6 +11,12 @@
 
 #define LOGERR(...) {fprintf(stderr, "[%s:%d] %s: ", __FILE__, __LINE__, __func__); fprintf(stderr, __VA_ARGS__);}
 
+#ifdef DEBUGBUILD
+#define DBGTRC(...) LOGERR(__VA_ARGS__)
+#else
+#define DBGTRC(...)
+#endif
+
 int main(int argc, char **argv) {
     return EXIT_SUCCESS;
 }
