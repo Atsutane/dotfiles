@@ -20,6 +20,7 @@
 #  text and console edge:
 #   '%{=b}%{G} Screens: '
 #term screen-256color
+#term xterm-256color
 
 # terminfo and termcap for nice 256 color terminal
 # allow bold colors - necessary for some reason
@@ -62,11 +63,12 @@ vbell off
 #hardstatus alwayslastline "%{=b}%{kG} Screen(s): %{r}%w %=%{kG}%c  %D, %d.%m.%Y "
 
 # Green text(host), time, and date; windows in blue:
-hardstatus alwayslastline "%{=b}%{kG} [%{G}%H] Screen(s): %{r}%w %=%{kG}%c  %D, %d.%m.%Y "
+# WORKED WITH SCREEN 4:
+#hardstatus alwayslastline "%{=b}%{kG} [%{G}%H] %{r}%w %=%{kG}%c %d.%m.%Y "
 
-
-# Green text(host), time, and date; windows in blue:
-#hardstatus alwayslastline "%{=b}%{kG} [%{G}%H] Screen(s): %{r}%w ?%f%t%?(%u)%? %=%{kG}%c  %D, %d.%m.%Y "
+# Port to screen 5 attempt:
+#hardstatus alwayslastline "%{=b2;0}[%{4}%H%{-}] %{7;0}%w %=%{=b2;0}[%{3}%c %d.%m.%Y%{-}]"
+hardstatus alwayslastline " %{=b2;0}[%{4}%H%{-}]%{-} %{7;0}%?%-Lw%?%{+9;0}(%{+15;0}%n%f %t%?(%u)%?%{-})%{-} ^H%?%+Lw%?%= %{-} %=%{=b2;0}[%{3}%c %d.%m.%Y%{-}]%{-}%{-}"
 
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
 
