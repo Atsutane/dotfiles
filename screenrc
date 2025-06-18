@@ -29,7 +29,7 @@ attrcolor b ".I"
 termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 #termcapinfo xterm|xterms|xs|rxvt ti@:te@
 # erase background with current bg color
-defbce "on" 
+defbce "on"
 
 defutf8 on
 vbell off
@@ -82,10 +82,10 @@ msgwait 1
 
 #bind t screen -t top 0 htop
 #bind v screen -t vim 1 vim
-bind r screen -t rtorrent 2 rtorrent 
+bind r screen -t rtorrent 2 rtorrent
 
 #screen -t zsh 0 zsh
-#screen -t zsh 1 zsh 
+#screen -t zsh 1 zsh
 #use F7 and F8 to cycle trough the windows
 bindkey -k k7 prev
 bindkey -k k8 next

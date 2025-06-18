@@ -35,7 +35,7 @@ set directory=/tmp
 " Make mouse behave the same across all terminals
 set mouse-=a
 " don't store .viminfo in $HOME
-set viminfo+=n/tmp/.viminfo_atsu
+set viminfo+=n/tmp/.viminfo_$USER
 
 " Highlighting for whitespaces
 highlight ExtraWhitespace ctermbg=red guibg=red
