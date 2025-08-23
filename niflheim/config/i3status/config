@@ -49,9 +49,9 @@ cpu_temperature 0 {
 }
 
 memory {
-	format = "MEMORY: %used used"
+	format = "RAM: %used used"
 	threshold_degraded = "10%"
-	format_degraded = "MEMORY: %free free"
+	format_degraded = "RAM: %free free"
 }
 
 disk "/" {
