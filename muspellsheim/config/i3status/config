@@ -1,0 +1,61 @@
+general {
+	colors = true
+	interval = 5
+	output_format = i3bar
+}
+
+order  = "ipv6"
+order += "disk /"
+order += "disk /home"
+#order += "run_watch DHCP"
+order += "wireless wlan0"
+order += "ethernet enp2s0"
+order += "battery 0"
+order += "cpu_temperature 0"
+order += "load"
+order += "time"
+
+ipv6 {
+	format_up = "%ip"
+	format_down = ""
+}
+
+wireless wlan0 {
+	format_up = "W: (%quality at %essid) %ip"
+	format_down = "W"
+}
+
+ethernet enp2s0 {
+	format_up = "E: %ip(%speed)"
+	format_down = ""
+}
+
+battery 0 {
+	last_full_capacity = true
+	format = "%status %percentage %remaining [@%emptytime]"
+}
+
+run_watch DHCP {
+	pidfile = "/run/dhclient*.pid"
+}
+
+time {
+	format = "%Y-%m-%d %H:%M:%S"
+}
+
+load {
+	format = "%1min"
+}
+
+cpu_temperature 0 {
+	format = "T: %degrees°C"
+}
+
+disk "/" {
+	format = "/%free"
+}
+
+disk "/home" {
+	format = "~%free"
+}
+
