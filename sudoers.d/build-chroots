@@ -1,0 +1,2 @@
+%build-chroots	ALL= NOPASSWD: /usr/bin/extra-x86_64-build,/usr/bin/gnome-unstable-x86_64-build,/usr/bin/kde-unstable-x86_64-build,/usr/bin/multilib-build,/usr/bin/multilib-staging-build,/usr/bin/multilib-testing-build,/usr/bin/staging-x86_64-build,/usr/bin/testing-x86_64-build
+
