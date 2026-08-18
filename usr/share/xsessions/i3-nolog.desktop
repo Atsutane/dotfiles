@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=i3-nolog
+Comment=improved dynamic tiling window manager
+Exec=i3 --shmlog-size 0
+TryExec=i3
+Type=XSession
+X-LightDM-DesktopName=i3-nolog
+DesktopNames=i3-nolog
+Keywords=tiling;wm;windowmanager;window;manager;
