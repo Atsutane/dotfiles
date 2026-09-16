@@ -20,7 +20,7 @@ font pango:DejaVu Sans Mono, Terminus Semi-Condensed 11
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -e
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -235,8 +235,8 @@ bar {
 }
 
 # Startup
-exec feh --bg-scale /home/atsutane/.wallpaper
-exec xrdb -merge .Xdefaults
+#exec feh --bg-scale /home/atsutane/.wallpaper
+#exec xrdb -merge .Xdefaults
 
 # Color config
 client.focused #859900 #859900 #fdf6e3 #859900
