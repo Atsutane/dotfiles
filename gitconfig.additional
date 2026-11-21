@@ -17,7 +17,8 @@
 	rebase = false
 [alias]
 	logtree = log --graph --oneline --decorate --all
-	logfull = log --full-diff -p
+	logfull = log --full-diff -p --show-signature
+	logsigned = log --pretty=format:\"%h %G? %aN  %s\"
 [pretty]
 	fixes = Fixes: %h (\"%s\")
 
